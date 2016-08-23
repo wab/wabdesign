@@ -1,6 +1,4 @@
-# Front init project
-
-> A quick starter project with webpack module bundler, Babel & Sass loaders, Foundation framework ready
+# sources of wabdsgn front page
 
 ## Build Setup
 
