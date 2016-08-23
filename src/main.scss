@@ -1,0 +1,78 @@
+@import "styles/settings";
+
+// Import npm dependencies
+
+@import "~foundation-sites/scss/foundation";
+// @import "~font-awesome/scss/font-awesome";
+
+@import "styles/icons";
+@import "styles/includes";
+
+body {
+  @include grid-row;
+}
+
+.page {
+  @include grid-column(12);
+
+  @include breakpoint(medium) {
+    @include grid-column-size(10);
+  }
+
+  @include breakpoint(large) {
+    @include grid-column-size(8);
+  }
+}
+
+.logo {
+  max-width: 20%;
+  @extend .float-right;
+  margin: 1em;
+}
+
+.mainheader {
+  margin-bottom: $global-margin * 4;
+}
+
+.subtitle {
+  &:before {
+    content: '\21B3 '
+  }
+}
+
+.ours {
+  margin-top: $global-margin * 3;
+  padding: $global-padding 0;
+  // border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.reseaux {
+  @include menu-base;
+}
+
+p a {
+  //color: inherit;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.1em 0;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: $light-gray;
+    transition: all 0.2s ease;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &:hover, &:focus {
+    &:after {
+      background-color: map-get($foundation-palette, accent);
+      height: 2px;
+    }
+  }
+}

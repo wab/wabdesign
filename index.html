@@ -1,15 +1,87 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="description" content="wab github page">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>wabdesign</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="author" href="humans.txt">
-    </head>
-    <body>
-        <h1>Hello world !</h1>
-        <script src="js/main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>jérôme boileux - front-end developer</title>
+  <meta name="description" content="je m'atèle à faire des interfaces web de qualité depuis 2006">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="page">
+
+    <header class="mainheader">
+      <svg class="logo" viewBox="0 0 71.3 71.3">
+        <circle fill="#455A64" cx="35.7" cy="35.7" r="35.7"/>
+        <path fill="#FFFFFF" d="M20.9,52.1c-2.4,0-4.3-1.7-4.3-3.8V23.4c0-2.1,1.9-3.8,4.3-3.8s4.3,1.7,4.3,3.8v24.9
+          C25.2,50.4,23.3,52.1,20.9,52.1z"/>
+        <path fill="#CFD8DC" d="M35.7,55.1c-2.4,0-4.3-1.7-4.3-3.8V26.4c0-2.1,1.9-3.8,4.3-3.8s4.3,1.7,4.3,3.8v24.9
+          C40,53.4,38.1,55.1,35.7,55.1z"/>
+        <path fill="#BDBDBD" d="M50.7,52.1c-2.4,0-4.3-1.7-4.3-3.8V23.4c0-2.1,1.9-3.8,4.3-3.8s4.3,1.7,4.3,3.8v24.9
+          C55,50.4,53.1,52.1,50.7,52.1z"/>
+      </svg>
+      <h1>Jérôme Boileux, développeur front-end à Rennes</h1>
+      <p class="lead">
+        Bonjour et bienvenue sur cette page de présentation, je suis intégrateur / développeur front-end depuis 2006 et je m'atèle à faire des interfaces web de qualité
+      </p>
+
+      <blockquote>Votre interface doit être accessible, performante et maintenable !</blockquote>
+
+    </header>
+
+    <aside class="callout">
+      <p>Cette page est en cours de conception  !</p>
+      <p><small>loading &hellip;</small><progress class="secondary" max="100" value="45"></progress></p>
+    </aside>
+
+    <h2>Mes compétences</h2>
+    <p>Je suis évidemment bilingue <strong>html</strong> &amp; <strong>css</strong> et parle couramment le <strike>Jquery</strike> <strong>Javacript (ES6)</strong></p>
+    <p>Cela dit, afin d'atteindre des objetcifs de performance et rendre les projets plus maintenable, mon workflow de developpement s'est considérablement étoffé depuis quelques années ; c'est très évolutif bien-sûr mais cela ressemeble en ce moment à un combo <a href="">Webpack</a> + Sass + BabelJs </p>
+    <h3 class="subtitle">Les frameworks &amp; librairies</h3>
+    <p>Ah les frameworks !</p>
+    <p>Il ne s'agit pas de tout refaire systématiquement et je non seulement je m'appuis régulièrement sur des frameworks comme <a href="http://getbootstrap.com">Bootstrap</a> ou plutôt <a href="http://foundation.zurb.com/">Foundation</a> mais en plus je les maîtrise.</p>
+    <p>J'ai aussi appris à fabriquer des applications à partir de framework <abbr title="Model View Controller">MVC</abbr> comme <a href="https://angularjs.org/">AngularJs</a> <sup>v1</sup> ou <a href="https://vuejs.org/">VueJs</a> <sup>v1</sup> (qui est vraimment top !)</p>
+    <p>Sinon j'utilise souvent plétores de librairies et API comme <a href="https://developers.google.com/maps/?hl=fr">Google Maps</a>, <a href="http://www.chartjs.org/">ChartJs</a>, <a href="http://scrollmagic.io/">ScrollMagic</a>, <a href="http://www.owlcarousel.owlgraphic.com/">Owl.carrousel <sup>v2</sup></a>, <a href="http://fontawesome.io/">Font-awesome</a>, etc </p>
+    <h3 class="subtitle">Le Vectoriel</h3>
+    <p>Afin de répondre le plus simplement possible à l'exigence de faire des interfaces adaptatives, il me semble que s'appuyer sur le <abbr title="Scalable Vector Graphic">SVG</abbr> est la meilleur option en ce qui concerne les <em>illustrations / logos / pictos</em></p>
+    <h3 class="subtitle">Wordpress</h3>
+    <p>Au fil des projets, j'ai développé une expertise certaine pour fabriquer des thèmes wordpress, j'utilise pour cela systématiquement la suite <strong>Sage</strong> / <strong>Bedrock</strong> / <strong>Trellis</strong> proposé par <a href="https://roots.io/">Roots</a></p>
+    <h3 class="subtitle">Versionning &amp; Workflow</h3>
+    <p>Pierre angulaire pour la maintenabilté d'un projet, l'outil de versionning apporte de la sérénité dans le travail en équipe, ici une base <a href="https://git-scm.com/">Git</a> avec son accompagnememnt <a href="http://danielkummer.github.io/git-flow-cheatsheet/index.fr_FR.html">GitFLow</a> (modèle de workflow) fera l'affaire.</p>
+    <h3 class="subtitle">Autre chose ?</h3>
+    <p>Un petit paragraphe pour placer quelques mots courants de mon workflow : <a href="">Sublime Text</a> forever, <a href="https://nodejs.org">NodeJs</a> et surtout <a href="https://www.npmjs.com/">npm</a> pour la gestion des dépendances (dès fois encore <a href="https://bower.io/">Bower</a> aussi), <strike>Grunt</strike> <a href="http://gulpjs.com/">Gulp</a> en gestionnaire de taches (même si Webpack ...), Ou encore <a href="https://trello.com/">Trello</a> &amp; <a href="https://slack.com/">Slack</a> pour le travail en équipe</p>
+    <hr>
+    <h2>Mon parcours</h2>
+    <p>Pour éviter le blabla, rendez-vous sur mon profil <a href="https://fr.linkedin.com/in/jeromeboileux">linkedin</a> qui est là pour ça !</p>
+    <hr>
+    <h2>Quelques références</h2>
+    <p>Le petit tour opérator des références publiques et récentes :</p>
+    <ul class="no-bullet">
+      <li>
+        <h3>Cedreo Interactive</h3>
+        <p>Refonte du thème wordpress</p>
+        <p><i class="fa fa-link"></i> <a href="http://cedreo-interactive.com">cedreo-interactive.com</a></p>
+      </li>
+      <li>
+        <h3>Les Stories Bearinpoint</h3>
+        <p>intégration et développement sous wordpress</p>
+        <p><i class="fa fa-link"></i> <a href="http://stories.bearingpoint.com">stories.bearingpoint.com</a></p>
+      </li>
+      <li>
+        <h3>Meteors app</h3>
+        <p>Petit application Météo pour s'exercer avec VueJs</p>
+        <p><i class="fa fa-link"></i> <a href="http://meteors.wabdesign.fr">meteors.wabdesign.fr</a></p>
+      </li>
+    </ul>
+
+    <footer class="ours">
+      <hr>
+      <ul class="no-bullet reseaux">
+        <li><a href="https://github.com/wab"><svg class="icon icon-twitter"><use xlink:href="#icon-github"></use></svg>github</a></li>
+        <li><a href="http://twitter.com/wabdesign"><svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>twitter</a></li>
+        <li><a href="http://codepen.io/wabdsgn/"><svg class="icon icon-twitter"><use xlink:href="#icon-codepen"></use></svg>codepen</a></li>
+      </ul>
+    </footer>
+  </div>
+
+</body>
 </html>
