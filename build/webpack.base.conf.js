@@ -1,6 +1,7 @@
 const path = require('path')
 // const webpack = require('webpack')
 const config = require('../config')
+const qs = require('qs')
 const projectRoot = path.resolve(__dirname, '../')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const extractCSS = new ExtractTextPlugin('main.css')
@@ -64,13 +65,26 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
-        exclude: path.resolve(__dirname, '../src/assets/svg'),
-        query: {
-          limit: 10000,
-          name: path.join(config.build.assetsSubDirectory, '[name].[hash:7].[ext]')
-        }
+        test: /\.(png|jpg|jpeg|gif)(\?.*)?$/,
+        loaders: [
+          'file?' + qs.stringify({
+            name: path.join(config.build.assetsSubDirectory, 'assets/[name]_[md5:hash:hex:8].[ext]')
+          }),
+          'image-webpack?' + JSON.stringify({
+            bypassOnDebug: true,
+            progressive: true,
+            optimizationLevel: 7,
+            interlaced: true,
+            pngquant: {
+              quality: '65-90',
+              speed: 4
+            },
+            svgo: {
+              removeUnknownsAndDefaults: false,
+              cleanupIDs: false
+            }
+          })
+        ]
       }
     ]
   },
