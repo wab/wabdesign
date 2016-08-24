@@ -8,8 +8,30 @@
 @import "styles/icons";
 @import "styles/includes";
 
+@keyframes move {
+  0%   { transform: scale(1) }
+  50% { transform: scale(0.9); }
+}
+
+@keyframes revmove {
+  0%  { transform: scale(1);  }
+  50% { transform: scale(1.2); fill: $white; }
+}
+
 body {
   @include grid-row;
+
+  @include breakpoint(large) {
+    font-size: 1.1rem;
+  }
+}
+
+h2, hr {
+  margin-top: $global-margin * 3;
+}
+
+h3 {
+  margin-top: 1.5em;
 }
 
 .page {
@@ -28,10 +50,57 @@ body {
   max-width: 20%;
   @extend .float-right;
   margin: 1em;
+  > * {
+    transform-origin: center;
+  }
+  .bg {
+    fill: $primary-color;
+    animation: move 10s infinite;
+  }
+
+  .bar {
+    animation: revmove 10s infinite;
+
+  }
+
+  .bar-1 {
+    fill: $white;
+  }
+
+  .bar-2 {
+    fill: $light-gray;
+  }
+
+  .bar-3 {
+    fill: $medium-gray;
+  }
+}
+
+.section-title {
+  margin-left: -0.5em;
+  &:before {
+    content: '\205D';
+    display: inline-block;
+    width: 0.5em;
+    color: $medium-gray;
+  }
 }
 
 .mainheader {
   margin-bottom: $global-margin * 4;
+  margin-top: $global-margin;
+}
+
+.mainquote {
+  border: none;
+  font-size: 1.5em;
+  .icon {
+    color: $light-gray;
+  }
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .subtitle {
@@ -41,9 +110,45 @@ body {
 }
 
 .ours {
-  margin-top: $global-margin * 3;
   padding: $global-padding 0;
   // border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.references--list {
+  @include flex-grid-row(nest, $grid-row-width, 2, true, $grid-column-gutter) { }
+  //@include flex-grid-layout(2, '.references--item');
+}
+
+.references--item {
+  @include flex-grid-column(2);
+  margin-bottom: $global-margin * 2;
+
+  @include breakpoint(medium) {
+    @include flex-grid-column(1);
+  }
+
+  .callout {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+  }
+
+}
+
+.references--item--link {
+  color: map-get($foundation-palette, accent);
+  font-family: $font-family-monospace;
+
+  &:hover, &:focus {
+    color: darken(map-get($foundation-palette, accent), 10%);
+  }
+}
+
+.references--item--title {
+  font-size: 1.4rem;
+  padding-bottom: $global-padding;
+  border-bottom: 1px dotted $light-gray;
 }
 
 .reseaux {
