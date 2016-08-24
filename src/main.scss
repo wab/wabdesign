@@ -8,6 +8,16 @@
 @import "styles/icons";
 @import "styles/includes";
 
+@keyframes move {
+  0%   { transform: scale(1) }
+  50% { transform: scale(0.9); }
+}
+
+@keyframes revmove {
+  0%  { transform: scale(1);  }
+  50% { transform: scale(1.2); fill: $white; }
+}
+
 body {
   @include grid-row;
 
@@ -40,9 +50,17 @@ h3 {
   max-width: 20%;
   @extend .float-right;
   margin: 1em;
-
+  > * {
+    transform-origin: center;
+  }
   .bg {
     fill: $primary-color;
+    animation: move 10s infinite;
+  }
+
+  .bar {
+    animation: revmove 10s infinite;
+
   }
 
   .bar-1 {
