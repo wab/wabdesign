@@ -6,7 +6,7 @@
   "scripts": {
     "build": "node build/build.js",
     "dev": "node build/dev-server.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "production -d dist"
   },
   "keywords": [
     "webpack",
