@@ -19,8 +19,7 @@
 }
 
 body {
-  @include grid-row;
-
+  padding: $global-padding;
   @include breakpoint(large) {
     font-size: 1.1rem;
   }
@@ -32,6 +31,10 @@ h2, hr {
 
 h3 {
   margin-top: 1.5em;
+}
+
+.wrapper {
+  @include grid-row;
 }
 
 .page {
@@ -111,20 +114,22 @@ h3 {
 
 .ours {
   padding: $global-padding 0;
-  // border-top: 1px solid rgba(0,0,0,0.2);
 }
 
 .references--list {
-  @include flex-grid-row(nest, $grid-row-width, 2, true, $grid-column-gutter) { }
-  //@include flex-grid-layout(2, '.references--item');
+  @include flex-grid-row(nest, $grid-row-width, 6, true, $grid-column-gutter) { }
 }
 
 .references--item {
-  @include flex-grid-column(2);
+  @include flex-grid-column(6);
   margin-bottom: $global-margin * 2;
 
   @include breakpoint(medium) {
-    @include flex-grid-column(1);
+    @include flex-grid-column(4);
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-column(3);
   }
 
   .callout {
