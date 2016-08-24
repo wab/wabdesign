@@ -59,20 +59,20 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #ec5840,
 );
-$light-gray: #CFD8DC;
-$medium-gray: #BDBDBD;
-$dark-gray: #757575;
+$light-gray: lighten(map-get($foundation-palette, primary), 50%);
+$medium-gray: lighten(map-get($foundation-palette, primary), 30%);
+$dark-gray: darken(map-get($foundation-palette, primary), 10%);
 $black: #212121;
 $white: #fff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Raleway', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Raleway', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 2px;
 $global-text-direction: ltr;
 $global-flexbox: false;
 $print-transparent-backgrounds: true;
@@ -106,7 +106,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: $body-font-family;
+$header-font-family: 'Lobster', $body-font-family;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -161,7 +161,7 @@ $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $dark-gray;
 $blockquote-padding: rem-calc(9 20 0 19);
-$blockquote-border: 1px solid $medium-gray;
+$blockquote-border: 1px solid map-get($foundation-palette, accent);
 $cite-font-size: rem-calc(13);
 $cite-color: $dark-gray;
 $keystroke-font: $font-family-monospace;
@@ -446,7 +446,7 @@ $pagination-arrows: true;
 // ----------------
 
 $progress-height: 1rem;
-$progress-background: $medium-gray;
+$progress-background: $light-gray;
 $progress-margin-bottom: $global-margin;
 $progress-meter-background: $primary-color;
 $progress-radius: $global-radius;
