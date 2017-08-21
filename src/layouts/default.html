@@ -1,0 +1,37 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jérôme boileux - front-end developer</title>
+    <meta name="description" content="je m'atèle à faire des interfaces web de qualité depuis 2006">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#455a64">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+  {{> icons}}
+
+    <div class="wrapper">
+      <div class="page">
+        {{> body}}
+        {{> footer}}
+      </div>
+    </div>
+
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

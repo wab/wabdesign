@@ -1,0 +1,60 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-download {
+  width: 0.9285714285714285em;
+}
+
+.icon-twitter {
+  width: 0.9285714285714285em;
+}
+
+.icon-github {
+  width: 0.8571428571428571em;
+}
+
+.icon-pinterest {
+  width: 0.8571428571428571em;
+}
+
+.icon-linkedin {
+  width: 0.8571428571428571em;
+}
+
+.icon-quote-left {
+  width: 0.9285714285714285em;
+}
+
+.icon-quote-right {
+  width: 0.9285714285714285em;
+}
+
+.icon-code-fork {
+  width: 0.5714285714285714em;
+}
+
+.icon-trello {
+  width: 0.8571428571428571em;
+}
+
+.icon-slack {
+  width: 0.9285714285714285em;
+}
+
+.icon-screen {
+  width: 1.0714285714285714em;
+}

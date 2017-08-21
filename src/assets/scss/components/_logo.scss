@@ -1,0 +1,29 @@
+.logo {
+  max-width: 20%;
+  float: right;
+  margin: 1em;
+  > * {
+    transform-origin: center;
+  }
+  .bg {
+    fill: $primary-color;
+    animation: move 10s infinite;
+  }
+
+  .bar {
+    animation: revmove 10s infinite;
+
+  }
+
+  .bar-1 {
+    fill: $white;
+  }
+
+  .bar-2 {
+    fill: $light-gray;
+  }
+
+  .bar-3 {
+    fill: $medium-gray;
+  }
+}
